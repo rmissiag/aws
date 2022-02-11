@@ -20,7 +20,7 @@
   tasks:
     - name: Launch instance
       local_action:
-        module: amazon.aws.ec2
+        module: ec2_instance
         keypair: "{{ keypair }}"
         instance_type: "{{ type | default('t2.micro') }}"
         vpc_subnet_id: "{{ vpc_subnet | default('subnet-303aea1e') }}"
